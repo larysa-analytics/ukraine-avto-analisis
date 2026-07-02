@@ -13,22 +13,21 @@ An end-to-end data engineering and business intelligence project that processes,
 ---
 
 ## Data Pipeline Architecture
-
+```text
 [Raw CSV Files (3 Years, 6.69M+ rows)]
-│
-▼ (Python ETL)
-[Data Cleaning & Validation]
-│
-▼ (SQLAlchemy chunksize=50000)
-[Staging SQL Database]
-│
-▼ (SQL Transformations & Joins)
-[Data Mart (Summary)]
-│
-▼
-[Tableau Dashboard]
+                │
+                ▼ (Python ETL)
+  [Data Cleaning & Validation]
+                │
+                ▼ (SQLAlchemy chunksize=50000)
+    [Staging SQL Database]
+                │
+                ▼ (SQL Transformations & Joins)
+     [Data Mart (Summary)]
+                │
+                ▼
+       [Tableau Dashboard]
 
----
 
 ## Technical Implementation Details
 
