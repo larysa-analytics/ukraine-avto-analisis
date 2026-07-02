@@ -32,7 +32,7 @@ An end-to-end data engineering and business intelligence project that processes,
 
 ## Technical Implementation Details
 
-### 1. Python ETL & Data Engineering (`etl_pipeline.py`)
+### 1. Python ETL & Data Engineering (ua_transport_etl.ipynb / ua_transport_eda_2025.ipynb)
 The primary challenge was handling large historical datasets (2023: 2.12M, 2024: 2.34M, 2025: 2.22M rows) without exhausting RAM.
 * **Memory Management:** Implemented data streaming and bulk-loaded the data into the database using `chunksize=50000` via `sqlalchemy`.
 * **Data Typization:** Enforced strict data types during `pd.read_csv()` for key categorical fields (`REG_ADDR_KOATUU`, `VIN`, `OPER_CODE`) to prevent mixed-type inference errors.
@@ -40,7 +40,7 @@ The primary challenge was handling large historical datasets (2023: 2.12M, 2024:
 * **Regex Transformation:** Cleaned weight metrics (`OWN_WEIGHT`, `TOTAL_WEIGHT`) containing European comma separators, converting them via regex to standard floats.
 * **Anomaly Filtering:** Removed invalid records with dates outside the 1950–2026 range and dropped rows with critical missing attributes.
 
-### 2. SQL Modeling & Data Mart Development (`modeling.sql`)
+### 2. SQL Modeling & Data Mart Development (01_init_and_dimensions.sql / 02_tableau_car_market_mart.sql )
 * **Data Consolidation:** Merged yearly staging tables using an optimized `UNION ALL` structure.
 * **Geospatial Parsing:** Extracted regional codes by parsing the KOATUU classification codes (`SUBSTR(REG_ADDR_KOATUU, 1, 2)`) and joined them with a standardized Ukrainian regions lookup table.
 * **Feature Engineering:** Calculated vehicle age at the moment of registration using conditional logic (`CASE WHEN`) to segment the fleet into commercial age tiers.
