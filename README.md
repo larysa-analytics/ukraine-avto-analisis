@@ -6,8 +6,8 @@ An end-to-end data engineering and business intelligence project that processes,
 ---
 
 ## 🛠️ Tech Stack & Architecture
-* **Data Engineering (ETL):** Python (`pandas`, `numpy`, `sqlalchemy`, `re`)
-* **Database & Modeling:** SQL (SQLite / PostgreSQL)
+* **Data Engineering (ETL):** Python (`pandas`, `numpy`, `sqlalchemy`)
+* **Database & Modeling:** SQL (SQLite)
 * **Business Intelligence:** Tableau Desktop
 
 ---
