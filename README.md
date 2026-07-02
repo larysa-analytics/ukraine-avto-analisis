@@ -51,6 +51,13 @@ The primary challenge was handling large historical datasets (2023: 2.12M, 2024:
 * Designed an optimized **Phone Layout** to ensure seamless mobile viewing for business stakeholders.
 
 ---
+```markdown
+###   How to Run the Project
+1. Clone this repository.
+2. Download the source datasets from the MIA Open Data Portal.
+3. Run the Python ETL script to clean and load the data into the database: `python notebooks/ua_transport_etl.ipynb`
+4. Execute SQL scripts from the `sql/` directory to build the analytical data mart.
+5. Connect your BI tool (Tableau) to the generated database view.
 
 ## Repository Structure
 * `notebooks/` — Python Jupyter Notebooks / ETL scripts for data extraction and cleaning.
