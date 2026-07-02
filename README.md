@@ -1,18 +1,18 @@
-# 🚗 Ukrainian EV Market Analytics (2023–2025): End-to-End Data Pipeline
+# Ukrainian EV Market Analytics (2023–2025): End-to-End Data Pipeline
 
 An end-to-end data engineering and business intelligence project that processes, cleans, and visualizes open-source data from the Ministry of Internal Affairs (MIA) of Ukraine. The pipeline handles **6.69+ million rows** of raw vehicle registration data to discover insights into the country's electric vehicle (EV) market growth.
 
 📊 **[Link to Tableau Interactive Dashboard](https://public.tableau.com/views/EVMarketTrendsinUkraine/Dashboard1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)**
 ---
 
-## 🛠️ Tech Stack & Architecture
+## Tech Stack & Architecture
 * **Data Engineering (ETL):** Python (`pandas`, `numpy`, `sqlalchemy`)
 * **Database & Modeling:** SQL (SQLite)
 * **Business Intelligence:** Tableau Desktop
 
 ---
 
-## 📐 Data Pipeline Architecture
+## Data Pipeline Architecture
 
 [Raw CSV Files (3 Years, 6.69M+ rows)]
 │
@@ -30,7 +30,7 @@ An end-to-end data engineering and business intelligence project that processes,
 
 ---
 
-## 🔧 Technical Implementation Details
+## Technical Implementation Details
 
 ### 1. Python ETL & Data Engineering (`etl_pipeline.py`)
 The primary challenge was handling large historical datasets (2023: 2.12M, 2024: 2.34M, 2025: 2.22M rows) without exhausting RAM.
@@ -53,7 +53,7 @@ The primary challenge was handling large historical datasets (2023: 2.12M, 2024:
 
 ---
 
-## 📂 Repository Structure
+## Repository Structure
 * `notebooks/` — Python Jupyter Notebooks / ETL scripts for data extraction and cleaning.
 * `sql/` — Queries for database initialization, `UNION ALL` merging, and Data Mart generation.
 * `README.md` — Project documentation.
